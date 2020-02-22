@@ -36,6 +36,35 @@ $(document).ready(function() {
   }
 
   function randomCrystalValues() {
-    
+    (i = numbs.length), (j = 0);
+    nums.splice(j, 1);
   }
-})
+}
+randomCrystalValues();
+
+$(".crystal-image").on("click", function() {
+  $(crystalOne).attr("data-crystalvalue", ranNums[0]);
+  $(crystalTwo).attr("data-crystalvalue", ranNums[1]);
+  $(crystalThree).attr("data-crystalvalue", ranNums[2]);
+  $(crystalFour).attr("data-crystalvalue"), ranNums[3]);
+
+  var crystalValue = $(this).attr("data-crystalvalue");
+  crystalValue = parseInt(crystalValue);
+
+  // I have to add the value of every crystal that is clicked and make 
+  //sure they are added together everytime a crystal is clicked
+})counterTotal += crystalValue;
+$("#counter-total").text(counterTotal);
+
+ if (counterTotal == targetNumber) {
+   alert("You Win!");
+   $("#wins").text(wins);
+   restart();
+ } else if (counterTotal >+ targetNumber) {
+   alert("You Lose!");
+   losses++;
+   $("#losses").text(losses);
+   restart();
+  }
+  }); 
+});
