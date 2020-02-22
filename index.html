@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Crystals Collector</title>
-  
-  
-  
-      <link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Collector</title>
 
-  
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
-<br>
-  <div id="background">
+<br> 
+    <div id="background">
         <div id="instructions">
-            <p>You will now start with a random number that you have to match.</p>
-            <p> Each crystal below has a different amount that it is worth. Keep clicking to add up your points.</p>
-            <p> If you can get your number to match the number at the top you Win! But ... If you let your number go over... You Lose!</p>
-            <p> Everytime you restart the game... All the numbers change... Good Luck! </p>
+            <p> You will now start with a random number that you have to match.</p>
+            <p> Each crystal below has a different amount that it is worth. Keep clicking on the crystals to add up your points.</p>
+            <p> If you can get your number to match the number at the top you Win! But ... If you let your number go over ... You Lose!</p>
+            <p> Everytime you restart the game ... All the numbers change ... Good Luck ! </p> 
         </div>
-        <div id="game">
+        <div id="crystal-game">
             <div id="current-random-num">
             </div>
             <div id="wins-losses">
@@ -30,32 +26,21 @@
                 <p>You Lose: <span id="You-Lose"></span></p>
             </div>
         </div>
-        <div id="crystal-container" >
+        <div id="crystal-container">
             <div class="crystals">
-                <img src="./assets/images/diamond2.jpg" alt="Crystal" class="crystal-image " id="crystal-1" />
+                <img src="./assets/images/blueflower.jpg" alt="crystal" class="crytsal-image" id="crystal-1" />
             </div>
             <div class="crystals">
-                <img src="./assets/images/blueflower.jpg" alt="Crystal" class="crystal-image" id="crystal-2" />
+                <img src="./assets/images/diamond2.jpg" alt="crystal" class="crytsal-image" id="crystal-2" />
             </div>
             <div class="crystals">
-                <img src="./assets/images/redstar.jpg" alt="Crystal" class="crystal-image" id="crystal-3" />
+                <img src="./assets/images/greenheart.jpg" alt="crystal" class="crytsal-image" id="crystal-3" />
             </div>
             <div class="crystals">
-                <img src="./assets/images/greenheart.jpg" alt="Crystal" class="crystal-image" id="crystal-4" />
+                <img src="./assets/images/redstar.jpg" alt="crystal" class="crytsal-image" id="crystal-4" />
             </div>
-        </div>
-        <div id="score-container">
-            <div id="total-header">Your total score is: </div>
-            <div id="total-score"><span id="counter-total"></span></div>
         </div>
     </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-
-  
-
-    <script  src="./assets/javascript/game.js"></script>
-
-
+    
 </body>
-
 </html>
