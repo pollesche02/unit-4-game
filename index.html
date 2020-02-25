@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crystal Collector</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="assets/css/reset.css" />
 
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<br> 
+  <body>
+    <br />
     <div id="background">
-        <div id="instructions">
-            <p> You will now start with a random number that you have to match.</p>
-            <p> Each crystal below has a different amount that it is worth. Keep clicking on the crystals to add up your points.</p>
-            <p> If you can get your number to match the number at the top you Win! But ... If you let your number go over ... You Lose!</p>
-            <p> Everytime you restart the game ... All the numbers change ... Good Luck ! </p> 
+      <div id="instructions">
+        <p>You will now start with a random number that you have to match.</p>
+        <p>Each crystal below has a different amount that it is worth. Keep
+          clicking on the crystals to add up your points.
+        </p>
+        <p>If you can get your number to match the number at the top you Win! But
+          ... If you let your number go over ... You Lose!
+        </p>
+        <p>Everytime you restart the game ... All the numbers change ... Good
+          Luck !
+        </p>
+      </div>
+      <div id="game">
+        <div id="current-random-num"></div>
+        <div id="wins-losses">
+          <p>You Win: <span id="You-Win"></span></p>
+          <p>You Lose: <span id="You-Loss"></span></p>
         </div>
-        <div id="crystal-game">
-            <div id="current-random-num">
-            </div>
-            <div id="wins-losses">
-                <p>You Win: <span id="You-Win"></span></p>
-                <p>You Lose: <span id="You-Lose"></span></p>
-            </div>
+      </div>
+      <div id="crystal-container">
+        <div class="crystals">
+          <img src="./assets/images/blueflower.jpg" alt="blueflower" class="crytsal-image" id="crystal-1"/>
         </div>
-        <div id="crystal-container">
-            <div class="crystals">
-                <img src="./assets/images/blueflower.jpg" alt="crystal" class="crytsal-image" id="crystal-1" />
-            </div>
-            <div class="crystals">
-                <img src="./assets/images/diamond2.jpg" alt="crystal" class="crytsal-image" id="crystal-2" />
-            </div>
-            <div class="crystals">
-                <img src="./assets/images/greenheart.jpg" alt="crystal" class="crytsal-image" id="crystal-3" />
-            </div>
-            <div class="crystals">
-                <img src="./assets/images/redstar.jpg" alt="crystal" class="crytsal-image" id="crystal-4" />
-            </div>
+        <div class="crystals">
+          <img src="./assets/images/diamond2.jpg" alt="diamond2" class="crytsal-image" id="crystal-2"/>
         </div>
-        <div id="score-container">
-            <div id="total-header">Your Total So Far Is: </div>
-            <div id="Total-score"><span id="counter-total"></span></div>
+        <div class="crystals">
+          <img src="./assets/images/greenheart.jpg" alt="greenheart" class="crytsal-image" id="crystal-3"/>
         </div>
-    </div>
-    
-    <script src="assets/javascript/game.js"></script>
+        <div class="crystals">
+          <img src="./assets/images/redstar.jpg" alt="redstar" class="crytsal-image" id="crystal-4"/>
+        </div>
+      </div>
+      <div id="score-container">
+        <div id="total-header">Your Total Is:</div>
+        <div id="Total-score"><span id="counter-total"></span></div>
+      </div>
+    </div> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    
-</body>
+    <script src="./assets/javascript/game.js"></script>
+  </body>
 </html>
