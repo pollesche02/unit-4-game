@@ -1,4 +1,4 @@
-var random = 0
+var targetSum = 0
 var score = 0
 var wins = 0
 var losses = 0
@@ -9,42 +9,43 @@ $(document).ready(function () {
 })
 
 function startGame() {
-    var randnum1 = Math.floor(Math.random() * 19) + 19;
-    $("#blueflower").attr("value", randnum1);
+    var randnum1 = Math.floor(Math.random() * 19) + 1;
+    $("#crystal-1").attr("value", randnum1);
     
     console.log(randnum1);
-    var randnum2 = Math.floor(Math.random() * 19) + 19;
-    $("#diamond2").attr("value", randnum2);
+    var randnum2 = Math.floor(Math.random() * 19) + 1;
+    $("#crystal-2").attr("value", randnum2);
     console.log(randnum2);
-    var randnum3 = Math.floor(Math.random() * 19) + 19;
-    $("#greenheart").attr("value", randnum3);
+    var randnum3 = Math.floor(Math.random() * 19) + 1;
+    $("#crystal-3").attr("value", randnum3);
     console.log(randnum3);
-    var randnum4 = Math.floor(Math.random() * 19) + 19;
-    $("#redstar").attr("value", randnum4);
+    var randnum4 = Math.floor(Math.random() * 19) + 1;
+    $("#crystal-4").attr("value", randnum4);
     console.log(randnum4);
-    random = Math.floor(Math.random() * 100) + 19;
-    $("#random").text("Match Number: " + random);
-    console.log(randnum1, random);
-    var targetSum = Math.floor(Math.random() * 100) + 19;
+    targetSum = Math.floor(Math.random() * 100) + 19;
+    $("#target").text(targetSum);
+
+    
 }
 
-$("button").on("click", function (event) {
+$(".crystal-image").on("click", function (event) {
     event.preventDefault();
+    console.log(this)
     var gemValue = $(this).attr("value");
     score += parseInt(gemValue);
     console.log(score);
-    $("#score").text("Your Total Score: "  + score);
-    if (score === random) {
+    $("#total").text(score);
+    if (score ===  targetSum) {
         wins++;
         alert("You Win!");
-        $("#wins").text("Wins: "  + wins);
-        $("#score").text("Your Total Score: "  + score);
+        $("#wins").text(wins);
+     
         reset();
     }
-    else if (score > random) {
+    else if (score > targetSum) {
         losses++;
         alert("You Lose! :(")
-        $("#losses").text("Losses: " + losses);
+        $("#losses").text(losses);
         reset();
     }
 })
@@ -52,6 +53,9 @@ $("button").on("click", function (event) {
 function reset() {
     alert("Let's Collect More Crystals!");
     score = 0;
-    $("#score").text("Your Total Score: " + score);
+    $("#total").text(score);
     startGame();
 }
+
+
+
