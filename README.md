@@ -1,1 +1,3 @@
-# unit-4-game
+# unit-4-game -- With this game each jewel has a different number that it is worth. Above the jewels you will see the Target Number you need to reach. Simply click on each jewel and start adding up your numbers... but watch your count because if you go over you will lose the game....  Good Luck ... 
+
+# https://pollesche02.github.io/unit-4-game/
